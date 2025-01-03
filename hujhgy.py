@@ -7,12 +7,12 @@ class Character:
         self.health = health
 
     def attack(self, opponent):
-        damage = random.randint(10, 20)  # Random damage between 5 and 15
+        damage = random.randint(10, 40)  # Random damage between 5 and 15
         print(f"{self.name} attacks {opponent.name} and deals {damage} damage!")
         opponent.health -= damage
 
     def heal(self):
-        heal_amount = random.randint(5, 20)
+        heal_amount = random.randint(5, 40)
         self.health += heal_amount
         print(f"{self.name} heals for {heal_amount} health!")
 
@@ -40,7 +40,7 @@ def game():
         elif choice == "2":
             hero.heal()
         else:
-            print("Invalid choice! You lose your turn.")
+            print("i dont know what that is, so im skipping you okqy")
         
         # Check if villain is still alive
         if villain.is_alive():
