@@ -7,12 +7,12 @@ class Character:
         self.health = health
 
     def attack(self, opponent):
-        damage = random.randint(10, 40)  # Random damage between 5 and 15
+        damage = random.randint(7, 50)  # Random damage between 5 and 15
         print(f"{self.name} attacks {opponent.name} and deals {damage} damage!")
         opponent.health -= damage
 
     def heal(self):
-        heal_amount = random.randint(5, 40)
+        heal_amount = random.randint(10, 50)
         self.health += heal_amount
         print(f"{self.name} heals for {heal_amount} health!")
 
