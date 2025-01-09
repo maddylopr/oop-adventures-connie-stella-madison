@@ -8,17 +8,17 @@ class Character:
 
     def attack(self, opponent):
         damage = random.randint(7, 50)  # deals random damage between set numbers
-        print(f"{self.name} attacks {opponent.name} and deals {damage} damage!")
+        print(f"{self.name} swings their sword at {opponent.name} and deals {damage} damage!")
         opponent.health -= damage
 
     def heal(self):
         heal_amount = random.randint(10, 50)
         self.health += heal_amount
-        print(f"{self.name} heals for {heal_amount} health!")
+        print(f"{self.name} pops a medkit and heals {heal_amount} health!")
 
     def magic(self, opponent):
         damage = random.randint(30, 40)
-        print(f"{self.name} casts a spell on {opponent.name} and deals {damage} damage!")
+        print(f"{self.name} hurls a powerful spell torwards {opponent.name} and deals {damage} damage!")
         opponent.health -= damage
 
     def is_alive(self):
@@ -30,7 +30,7 @@ def game():
     hero = Character(input("Enter your hero's name: "), 100)
     villain = Character("evil kortnee", 150)
 
-    print(f"\nWelcome, {hero.name}! You are about to face {villain.name}!")
+    print(f"\n hey loser! your up against {villain.name}!")
     while hero.is_alive() and villain.is_alive():
         print(f"\n{hero.name}'s health: {hero.health} | {villain.name}'s health: {villain.health}\n")
         
@@ -56,9 +56,9 @@ def game():
 
     # in order to decide who is the winner
     if hero.is_alive():
-        print(f"\nCongratulations! {hero.name} defeated {villain.name}!")
+        print(f"\hey! {hero.name} defeated {villain.name}. you just spammed heals though, didnt you?")
     else:
-        print(f"\n{villain.name} has defeated you. Better luck next time!")
+        print(f"\n{villain.name} cooked you.. i would NOT let that slide")
 
     # replay
     if input("\nDo you want to play again? (yes/no): ").lower() == "yes":
