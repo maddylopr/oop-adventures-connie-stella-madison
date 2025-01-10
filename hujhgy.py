@@ -39,7 +39,7 @@ def game():
         print("1. Attack")
         print("2. Heal")
         print("3. Magic")
-        choice = input("Enter the number of your choice: ")
+        choice = input("enter the number of your choice: ")
 
         if choice == "1":
             hero.attack(villain)
@@ -61,7 +61,7 @@ def game():
         print(f"\n{villain.name} cooked you.. i would NOT let that slide")
 
     # replay
-    if input("\nDo you want to play again? (yes/no): ").lower() == "yes":
+    if input("\nwant to rematch? or are you scared? (yes/no): ").lower() == "yes":
         game()
 
 # runs the game
