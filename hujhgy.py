@@ -12,12 +12,12 @@ class Character:
         opponent.health -= damage
 
     def heal(self):
-        heal_amount = random.randint(10, 50)
+        heal_amount = random.randint(10, 43)
         self.health += heal_amount
         print(f"{self.name} pops a medkit and heals {heal_amount} health!")
 
     def magic(self, opponent):
-        damage = random.randint(30, 40)
+        damage = random.randint(30, 35)
         print(f"{self.name} hurls a powerful spell torwards {opponent.name} and deals {damage} damage!")
         opponent.health -= damage
 
