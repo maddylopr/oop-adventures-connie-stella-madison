@@ -21,6 +21,11 @@ class Character:
         print(f"{self.name} hurls a powerful spell torwards {opponent.name} and deals {damage} damage!")
         opponent.health -= damage
 
+    def do_not_use_this_attack(self, opponent):
+        damage = random.randint(1000000, 10000000000000)
+        print(f"why")
+        opponent.health -= damage
+
     def is_alive(self):
         return self.health > 0
 
@@ -39,6 +44,7 @@ def game():
         print("1. Attack")
         print("2. Heal")
         print("3. Magic")
+        print("4. dont")
         choice = input("enter the number of your choice: ")
 
         if choice == "1":
@@ -47,6 +53,8 @@ def game():
             hero.heal()
         elif choice == "3":
             hero.magic(villain)
+        elif choice == "4":
+            hero.do_not_use_this_attack(villain)
         else:
             print("someone had a typo!") 
         
