@@ -24,6 +24,7 @@ class Character:
     def do_not_use_this_attack(self, opponent):
         damage = random.randint(1000000, 10000000000000)
         print(f"why")
+        print(f"Wow! You dealt 100000000 damage! Critical hit!")
         opponent.health -= damage
 
     def is_alive(self):
@@ -64,7 +65,7 @@ def game():
 
     # in order to decide who is the winner
     if hero.is_alive():
-        print(f"\hey! {hero.name} defeated {villain.name}. you just spammed heals though, didnt you?")
+        print(f"hey! {hero.name} defeated {villain.name}. you just spammed heals though, didnt you?")
     else:
         print(f"\n{villain.name} cooked you.. i would NOT let that slide")
 
