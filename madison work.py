@@ -24,7 +24,7 @@ class Character:
     def do_not_use_this_attack(self, opponent):
         damage = random.randint(1000000, 10000000000000)
         print(f"why")
-        print(f"Wow! You dealt 100000000 damage! Critical hit!")
+        print(f"Wow! You dealt {damage} damage! Critical hit!")
         opponent.health -= damage
 
     def is_alive(self):
